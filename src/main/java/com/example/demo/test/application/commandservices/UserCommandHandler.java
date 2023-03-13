@@ -36,7 +36,6 @@ public class UserCommandHandler {
     User user = userRepository.save(userInfo);
 
     logger.info("UserCommandHandler, save : " + user);
-
     return user;
   }
 
@@ -49,10 +48,19 @@ public class UserCommandHandler {
     if(user != null) {
       user.changeUserName(rqstDto.getUserName());
     }
-
     logger.info("UserCommandHandler, save : " + user);
-
     return user;
+  }
+
+  @Transactional
+  public void delete(UserSaveRqstDto rqstDto) {
+
+    User user = userRepository.findById(rqstDto.getUserSeq()).orElseThrow();
+
+    if(user != null) {
+      userRepository.delete(user);
+    }
+    logger.info("UserCommandHandler, delete success");
   }
 
 }

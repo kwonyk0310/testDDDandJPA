@@ -71,4 +71,19 @@ public class UserController {
         }
     }
 
+    @GetMapping( "/delete")
+    public void userDelete(
+            @Parameter(in = ParameterIn.QUERY) UserSaveRqstDto userSaveRqstDto
+    ) throws Exception{
+        log.info("Test Start");
+
+        try {
+            commandHandler.delete(userSaveRqstDto);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new Exception();
+        }
+    }
+
 }
