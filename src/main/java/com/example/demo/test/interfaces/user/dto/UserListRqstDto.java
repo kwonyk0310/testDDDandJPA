@@ -1,6 +1,6 @@
-package com.example.demo.test.interfaces.member.dto;
+package com.example.demo.test.interfaces.user.dto;
 
-import com.example.demo.test.interfaces.member.validation.UserListRqstDtoValidation;
+import com.example.demo.test.interfaces.user.validation.UserListRqstDtoValidation;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;

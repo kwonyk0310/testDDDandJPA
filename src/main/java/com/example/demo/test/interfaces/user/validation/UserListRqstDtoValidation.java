@@ -1,6 +1,6 @@
-package com.example.demo.test.interfaces.member.validation;
+package com.example.demo.test.interfaces.user.validation;
 
-import com.example.demo.test.interfaces.member.dto.UserListRqstDto;
+import com.example.demo.test.interfaces.user.dto.UserListRqstDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 

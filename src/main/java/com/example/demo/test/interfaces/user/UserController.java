@@ -1,11 +1,11 @@
-package com.example.demo.test.interfaces.member;
+package com.example.demo.test.interfaces.user;
 
 import com.example.demo.test.application.commandservices.UserCommandHandler;
 import com.example.demo.test.application.queryservices.UserQueryHandler;
 import com.example.demo.test.domain.model.aggregates.User;
 import com.example.demo.test.domain.query.UserListQueryResult;
-import com.example.demo.test.interfaces.member.dto.UserListRqstDto;
-import com.example.demo.test.interfaces.member.dto.UserSaveRqstDto;
+import com.example.demo.test.interfaces.user.dto.UserListRqstDto;
+import com.example.demo.test.interfaces.user.dto.UserSaveRqstDto;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import lombok.RequiredArgsConstructor;
