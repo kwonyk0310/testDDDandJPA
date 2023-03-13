@@ -3,7 +3,7 @@ package com.example.demo.test.application.queryservices;
 import com.example.demo.test.domain.query.UserListQueryResult;
 import com.example.demo.test.domain.model.aggregates.User;
 import com.example.demo.test.domain.repository.UserRepository;
-import com.example.demo.test.interfaces.member.dto.UserListRqstDto;
+import com.example.demo.test.interfaces.user.dto.UserListRqstDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;

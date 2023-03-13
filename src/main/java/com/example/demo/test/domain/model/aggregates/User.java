@@ -1,10 +1,7 @@
 package com.example.demo.test.domain.model.aggregates;
 
 import javax.persistence.*;
-
 import lombok.*;
-
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Builder
