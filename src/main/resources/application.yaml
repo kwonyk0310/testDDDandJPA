@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/demo
+    username: root
+    password: ezens123
+    hikari:
+      auto-commit: false
+      connection-timeout: 3000
+      max-lifetime: 180000
+      maximum-pool-size: 5
+      data-source-properties:
+        cachePrepStmts: true
+        rewriteBatchedStatements: true
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL57Dialect
+    open-in-view: true
+    show-sql: false
+    properties:
+      hibernate:
+        dialect:
+          storage_engine: innodb
+        format_sql: true
+        hbm2ddl.auto: update
