@@ -1,6 +1,7 @@
 package com.example.demo.test.application.commandservices;
 
 import com.example.demo.test.domain.model.aggregates.User;
+import com.example.demo.test.domain.model.aggregates.UserId;
 import com.example.demo.test.domain.repository.UserRepository;
 import com.example.demo.test.interfaces.user.dto.UserSaveRqstDto;
 import lombok.RequiredArgsConstructor;
@@ -22,9 +23,13 @@ public class UserCommandHandler {
 
   public User save(UserSaveRqstDto rqstDto) {
 
+    UserId userId = UserId.builder()
+            .userId(rqstDto.getUserId())
+            .build();
+
     User userInfo = User.builder()
             .age(rqstDto.getAge())
-            .userId(rqstDto.getUserId())
+            .id(userId)
             .gender(rqstDto.getGender())
             .userName(rqstDto.getUserName())
             .build();
