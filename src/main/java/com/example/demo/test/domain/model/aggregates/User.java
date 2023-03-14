@@ -3,22 +3,24 @@ package com.example.demo.test.domain.model.aggregates;
 import javax.persistence.*;
 import lombok.*;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Builder
 @ToString
 @AllArgsConstructor
-@EqualsAndHashCode
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
-//@IdClass(UserId.class) 해당 어노테이션은 양 쪽 필드에 같은 값이 존재할 경우 사용
 @Table(name = "user_info", schema = "user_info")
-public class User implements Serializable {
+public class User {
 
-    @EmbeddedId
-    private UserId id;
+    @Id
+    @Column(name = "user_seq", nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long userSeq;
+
+    @Column(name = "user_id", nullable = false)
+    private String userId;
 
     @Column(name = "user_name", nullable = false)
     private String userName;
