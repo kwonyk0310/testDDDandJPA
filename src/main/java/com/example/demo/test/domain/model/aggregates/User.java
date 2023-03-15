@@ -16,7 +16,7 @@ public class User {
 
     @Id
     @Column(name = "user_seq", nullable = false)
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userSeq;
 
     @Column(name = "user_id", nullable = false)

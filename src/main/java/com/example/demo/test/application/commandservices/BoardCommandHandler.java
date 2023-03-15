@@ -28,6 +28,7 @@ public class BoardCommandHandler {
     Board boardInfo = Board.builder()
             .boardTitle(rqstDto.getBoardTitle())
             .boardContent(rqstDto.getBoardContent())
+            .userSeq(rqstDto.getUserSeq())
             .build();
 
     Board board = boardRepository.save(boardInfo);
@@ -45,6 +46,7 @@ public class BoardCommandHandler {
     if(board != null) {
       board.changeBoardTitle(rqstDto.getBoardTitle());
       board.changeBoardContent(rqstDto.getBoardContent());
+      board.updateUpdDate();
     }
     logger.info("BoardCommandHandler, save : " + board);
     return board;
