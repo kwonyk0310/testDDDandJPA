@@ -1,4 +1,4 @@
-package com.example.demo.test.interfaces.board.dto;
+package com.example.demo.test.interfaces.reply.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
@@ -10,34 +10,21 @@ import java.time.LocalDateTime;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class BoardListDto {
+public class ReplyListDto {
 
     @Schema(
             description = "게시글 고유번호",
             example = "151",
             required = true
     )
-    public int boardSeq;
+    public int replySeq;
 
     @Schema(
-            description = "게시글 제목",
-            example = "제목 입니다.",
+            description = "댓글 내용",
+            example = "댓글 내용 입니다.",
             required = true
     )
-    public String boardTitle;
-
-    @Schema(
-            description = "게시글 내용",
-            example = "게시글 내용",
-            required = true
-    )
-    private String boardContent;
-
-    @Schema(
-            description = "조회수",
-            example = "30"
-    )
-    private Integer views;
+    private String replyContent;
 
     @Schema(
             description = "사용자 고유 번호",

@@ -59,4 +59,5 @@ public class BoardSaveRqstDto {
           example = "2023-03-13 12:49:50"
   )
   private LocalDateTime updDate;
+
 }

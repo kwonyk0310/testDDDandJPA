@@ -1,6 +1,7 @@
-package com.example.demo.test.domain.model.aggregates;
+package com.example.demo.test.domain.model.aggregates.Board;
 
 import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -11,7 +12,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
-@Table(name = "board", schema = "board")
+@Table(name = "board")
 public class Board {
 
     @Id
@@ -28,6 +29,7 @@ public class Board {
     @Column(name = "user_seq", nullable = false)
     private Long userSeq;
 
+    @ColumnDefault("0")
     @Column(name = "views")
     private Integer views;
 
