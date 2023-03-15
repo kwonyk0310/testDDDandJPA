@@ -23,22 +23,21 @@ public class BoardSaveRqstDto {
 
   @Schema(
       description = "게시글 제목",
-      example = "apple",
+      example = "게시글 제목",
       required = true
   )
   private String boardTitle;
 
   @Schema(
       description = "게시글 내용",
-      example = "포도",
+      example = "게시글 내용",
       required = true
   )
   private String boardContent;
 
   @Schema(
       description = "조회수",
-      example = "30",
-      required = true
+      example = "30"
   )
   private Integer views;
 
@@ -47,19 +46,17 @@ public class BoardSaveRqstDto {
       example = "apple",
       required = true
   )
-  private String userSeq;
+  private Long userSeq;
 
   @Schema(
       description = "등록일",
-      example = "2023-03-13 12:49:50",
-      required = true
+      example = "2023-03-13 12:49:50"
   )
   private LocalDateTime regDate;
 
   @Schema(
           description = "수정일",
-          example = "2023-03-13 12:49:50",
-          required = true
+          example = "2023-03-13 12:49:50"
   )
   private LocalDateTime updDate;
 }

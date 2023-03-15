@@ -16,7 +16,7 @@ public class Board {
 
     @Id
     @Column(name = "board_seq", nullable = false)
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long boardSeq;
 
     @Column(name = "board_title", nullable = false)
@@ -24,6 +24,9 @@ public class Board {
 
     @Column(name = "board_content", nullable = false)
     private String boardContent;
+
+    @Column(name = "user_seq", nullable = false)
+    private Long userSeq;
 
     @Column(name = "views")
     private Integer views;
@@ -47,4 +50,5 @@ public class Board {
         this.boardContent = boardContent;
     }
 
+    public void updateUpdDate() { this.updDate = LocalDateTime.now(); }
 }
