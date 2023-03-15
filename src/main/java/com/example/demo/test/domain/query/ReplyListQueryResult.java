@@ -1,6 +1,6 @@
 package com.example.demo.test.domain.query;
 
-import com.example.demo.test.domain.model.aggregates.Board.Board;
+import com.example.demo.test.domain.model.aggregates.Board.Reply;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -10,8 +10,8 @@ import java.util.List;
 @Getter
 @Builder
 @AllArgsConstructor
-public class BoardListQueryResult {
+public class ReplyListQueryResult {
   public Integer totalCnt;
   public Integer page;
-  public List<Board> boardList;
+  public List<Reply> replyList;
 }

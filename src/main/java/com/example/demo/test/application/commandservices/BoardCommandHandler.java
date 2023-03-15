@@ -1,11 +1,8 @@
 package com.example.demo.test.application.commandservices;
 
-import com.example.demo.test.domain.model.aggregates.Board;
-import com.example.demo.test.domain.model.aggregates.User;
+import com.example.demo.test.domain.model.aggregates.Board.Board;
 import com.example.demo.test.domain.repository.BoardRepository;
-import com.example.demo.test.domain.repository.UserRepository;
 import com.example.demo.test.interfaces.board.dto.BoardSaveRqstDto;
-import com.example.demo.test.interfaces.user.dto.UserSaveRqstDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
