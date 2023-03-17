@@ -5,6 +5,7 @@ import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Builder
 @ToString
@@ -38,6 +39,10 @@ public class Board {
 
     @Column(name = "upd_date")
     private LocalDateTime updDate;
+
+    @OneToMany
+    @JoinColumn(name = "board_seq")
+    private List<Reply> reply;
 
     @PrePersist
     public void createdAt() {

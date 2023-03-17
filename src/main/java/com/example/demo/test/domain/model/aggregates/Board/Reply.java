@@ -26,9 +26,8 @@ public class Reply {
     @Column(name = "user_seq", nullable = false)
     private Long userSeq;
 
-    @ColumnDefault("0")
-    @Column(name = "views")
-    private Integer views;
+    @Column(name = "board_seq", nullable = false)
+    private Long boardSeq;
 
     @Column(name = "reg_date", nullable = false)
     private LocalDateTime regDate;
