@@ -1,8 +1,11 @@
 package com.example.demo.test.interfaces.reply;
 
+import com.example.demo.test.application.commandservices.ReplyCommandHandler;
 import com.example.demo.test.application.queryservices.ReplyQueryHandler;
+import com.example.demo.test.domain.model.aggregates.Board.Reply;
 import com.example.demo.test.domain.query.ReplyListQueryResult;
 import com.example.demo.test.interfaces.reply.dto.ReplyListRqstDto;
+import com.example.demo.test.interfaces.reply.dto.ReplySaveRqstDto;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import lombok.RequiredArgsConstructor;
@@ -14,11 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/Reply")
+    @RequestMapping("/Reply")
 public class ReplyController {
 
     private final ReplyQueryHandler queryHandler;
-//    private final ReplyCommandHandler commandHandler;
+    private final ReplyCommandHandler commandHandler;
 
     @GetMapping( "/list")
     public ReplyListQueryResult replyList(
@@ -36,53 +39,53 @@ public class ReplyController {
         }
     }
 
-//    @GetMapping( "/insert")
-//    public Reply replyInsert(
-//            @Parameter(in = ParameterIn.QUERY) ReplySaveRqstDto replySaveRqstDto
-//    ) throws Exception{
-//        log.info("Test Start");
-//
-//        try {
-//            Reply reply = commandHandler.save(replySaveRqstDto);
-//
-//            return reply;
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            throw new Exception();
-//        }
-//    }
-//
-//    @GetMapping( "/update")
-//    public Reply replyUpdate(
-//            @Parameter(in = ParameterIn.QUERY) ReplySaveRqstDto replySaveRqstDto
-//    ) throws Exception{
-//        log.info("Test Start");
-//
-//        try {
-//            Reply reply = commandHandler.update(replySaveRqstDto);
-//
-//            return reply;
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            throw new Exception();
-//        }
-//    }
-//
-//    @GetMapping( "/delete")
-//    public void replyDelete(
-//            @Parameter(in = ParameterIn.QUERY) ReplySaveRqstDto replySaveRqstDto
-//    ) throws Exception{
-//        log.info("Test Start");
-//
-//        try {
-//            commandHandler.delete(replySaveRqstDto);
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            throw new Exception();
-//        }
-//    }
+    @GetMapping( "/insert")
+    public Reply replyInsert(
+            @Parameter(in = ParameterIn.QUERY) ReplySaveRqstDto replySaveRqstDto
+    ) throws Exception{
+        log.info("Test Start");
+
+        try {
+            Reply reply = commandHandler.save(replySaveRqstDto);
+
+            return reply;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new Exception();
+        }
+    }
+
+    @GetMapping( "/update")
+    public Reply replyUpdate(
+            @Parameter(in = ParameterIn.QUERY) ReplySaveRqstDto replySaveRqstDto
+    ) throws Exception{
+        log.info("Test Start");
+
+        try {
+            Reply reply = commandHandler.update(replySaveRqstDto);
+
+            return reply;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new Exception();
+        }
+    }
+
+    @GetMapping( "/delete")
+    public void replyDelete(
+            @Parameter(in = ParameterIn.QUERY) ReplySaveRqstDto replySaveRqstDto
+    ) throws Exception{
+        log.info("Test Start");
+
+        try {
+            commandHandler.delete(replySaveRqstDto);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new Exception();
+        }
+    }
 
 }

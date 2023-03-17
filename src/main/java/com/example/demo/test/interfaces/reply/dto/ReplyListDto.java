@@ -17,7 +17,7 @@ public class ReplyListDto {
             example = "151",
             required = true
     )
-    public int replySeq;
+    public Long replySeq;
 
     @Schema(
             description = "댓글 내용",

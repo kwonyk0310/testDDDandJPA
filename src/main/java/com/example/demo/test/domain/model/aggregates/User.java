@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
-@Table(name = "user_info", uniqueConstraints = {@UniqueConstraint(columnNames = "userId")})
+@Table(name = "user_info", uniqueConstraints = {@UniqueConstraint(columnNames = "user_id")})
 public class User {
 
     @Id
