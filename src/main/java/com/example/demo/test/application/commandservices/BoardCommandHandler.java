@@ -1,6 +1,6 @@
 package com.example.demo.test.application.commandservices;
 
-import com.example.demo.test.domain.model.aggregates.Board.Board;
+import com.example.demo.test.domain.model.aggregates.Board;
 import com.example.demo.test.domain.repository.BoardRepository;
 import com.example.demo.test.interfaces.board.dto.BoardSaveRqstDto;
 import lombok.RequiredArgsConstructor;

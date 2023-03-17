@@ -2,7 +2,7 @@ package com.example.demo.test.interfaces.reply;
 
 import com.example.demo.test.application.commandservices.ReplyCommandHandler;
 import com.example.demo.test.application.queryservices.ReplyQueryHandler;
-import com.example.demo.test.domain.model.aggregates.Board.Reply;
+import com.example.demo.test.domain.model.Entity.Reply;
 import com.example.demo.test.domain.query.ReplyListQueryResult;
 import com.example.demo.test.interfaces.reply.dto.ReplyListRqstDto;
 import com.example.demo.test.interfaces.reply.dto.ReplySaveRqstDto;

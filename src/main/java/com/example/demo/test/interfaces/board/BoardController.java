@@ -2,7 +2,7 @@ package com.example.demo.test.interfaces.board;
 
 import com.example.demo.test.application.commandservices.BoardCommandHandler;
 import com.example.demo.test.application.queryservices.BoardQueryHandler;
-import com.example.demo.test.domain.model.aggregates.Board.Board;
+import com.example.demo.test.domain.model.aggregates.Board;
 import com.example.demo.test.domain.query.BoardListQueryResult;
 import com.example.demo.test.interfaces.board.dto.BoardListRqstDto;
 import com.example.demo.test.interfaces.board.dto.BoardSaveRqstDto;
