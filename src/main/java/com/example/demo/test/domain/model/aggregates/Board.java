@@ -1,5 +1,6 @@
-package com.example.demo.test.domain.model.aggregates.Board;
+package com.example.demo.test.domain.model.aggregates;
 
+import com.example.demo.test.domain.model.Entity.Reply;
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
 

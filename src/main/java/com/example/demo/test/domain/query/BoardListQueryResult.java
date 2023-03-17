@@ -1,6 +1,6 @@
 package com.example.demo.test.domain.query;
 
-import com.example.demo.test.domain.model.aggregates.Board.Board;
+import com.example.demo.test.domain.model.aggregates.Board;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
