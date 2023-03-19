@@ -48,16 +48,4 @@ public class BoardSaveRqstDto {
   )
   private Long userSeq;
 
-  @Schema(
-      description = "등록일",
-      example = "2023-03-13 12:49:50"
-  )
-  private LocalDateTime regDate;
-
-  @Schema(
-          description = "수정일",
-          example = "2023-03-13 12:49:50"
-  )
-  private LocalDateTime updDate;
-
 }

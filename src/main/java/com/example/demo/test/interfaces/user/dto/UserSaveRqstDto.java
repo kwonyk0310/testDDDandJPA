@@ -50,10 +50,4 @@ public class UserSaveRqstDto {
   )
   private String gender;
 
-  @Schema(
-      description = "등록일",
-      example = "2023-03-13 12:49:50",
-      required = true
-  )
-  private LocalDateTime registrationDate;
 }
