@@ -10,6 +10,8 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +24,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class BoardController {
 
     private final BoardQueryHandler queryHandler;
+
     private final BoardCommandHandler commandHandler;
+
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @GetMapping( "/list")
     public BoardListQueryResult boardList(
@@ -33,9 +38,12 @@ public class BoardController {
         try {
             BoardListQueryResult boardList = queryHandler.execute(boardListRqstDto);
 
+            logger.info("BoardListQueryHandler, execute : " + boardList);
+
             return boardList;
 
         } catch (Exception e) {
+            e.printStackTrace();
             throw new Exception();
         }
     }
