@@ -1,6 +1,8 @@
 package com.example.demo.test.application.commandservices;
 
-import com.example.demo.test.domain.model.Entity.Reply;
+import com.example.demo.test.domain.model.aggregates.Board;
+import com.example.demo.test.domain.model.entity.Reply;
+import com.example.demo.test.domain.repository.BoardRepository;
 import com.example.demo.test.domain.repository.ReplyRepository;
 import com.example.demo.test.interfaces.reply.dto.ReplySaveRqstDto;
 import lombok.RequiredArgsConstructor;
@@ -17,15 +19,19 @@ import javax.transaction.Transactional;
 public class ReplyCommandHandler {
 
   private final ReplyRepository replyRepository;
+  private final BoardRepository boardRepository;
 
   private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
   public Reply save(ReplySaveRqstDto rqstDto) {
 
+    Board board = boardRepository.findById(rqstDto.getBoardSeq()).orElseThrow(
+        ()->new IllegalArgumentException("해당하는 게시글이 없습니다."));
+
     Reply replyInfo = Reply.builder()
             .replyContent(rqstDto.getReplyContent())
             .userSeq(rqstDto.getUserSeq())
-            .boardSeq(rqstDto.getBoardSeq())
+            .board(board)
             .build();
 
     Reply reply = replyRepository.save(replyInfo);

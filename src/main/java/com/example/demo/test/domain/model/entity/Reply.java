@@ -1,7 +1,7 @@
-package com.example.demo.test.domain.model.Entity;
+package com.example.demo.test.domain.model.entity;
 
+import com.example.demo.test.domain.model.aggregates.Board;
 import lombok.*;
-import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -26,8 +26,9 @@ public class Reply {
     @Column(name = "user_seq", nullable = false)
     private Long userSeq;
 
-    @Column(name = "board_seq", nullable = false)
-    private Long boardSeq;
+    @ManyToOne
+    @JoinColumn(name = "board_seq")
+    private Board board;
 
     @Column(name = "reg_date", nullable = false)
     private LocalDateTime regDate;

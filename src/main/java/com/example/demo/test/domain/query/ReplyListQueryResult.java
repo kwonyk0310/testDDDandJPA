@@ -1,6 +1,6 @@
 package com.example.demo.test.domain.query;
 
-import com.example.demo.test.domain.model.Entity.Reply;
+import com.example.demo.test.domain.model.entity.Reply;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

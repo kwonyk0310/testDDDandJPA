@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -39,7 +40,7 @@ public class BoardController {
         }
     }
 
-    @GetMapping( "/insert")
+    @PostMapping( "/insert")
     public Board boardInsert(
             @Parameter(in = ParameterIn.QUERY) BoardSaveRqstDto boardSaveRqstDto
     ) throws Exception{
@@ -56,7 +57,7 @@ public class BoardController {
         }
     }
 
-    @GetMapping( "/update")
+    @PostMapping( "/update")
     public Board boardUpdate(
             @Parameter(in = ParameterIn.QUERY) BoardSaveRqstDto boardSaveRqstDto
     ) throws Exception{
@@ -73,7 +74,7 @@ public class BoardController {
         }
     }
 
-    @GetMapping( "/delete")
+    @PostMapping( "/delete")
     public void boardDelete(
             @Parameter(in = ParameterIn.QUERY) BoardSaveRqstDto boardSaveRqstDto
     ) throws Exception{

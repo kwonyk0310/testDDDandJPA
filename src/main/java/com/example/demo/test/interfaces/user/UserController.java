@@ -37,7 +37,7 @@ public class UserController {
         }
     }
 
-    @GetMapping( "/insert")
+    @PostMapping( "/insert")
     public User userInsert(
             @Parameter(in = ParameterIn.QUERY) UserSaveRqstDto userSaveRqstDto
     ) throws Exception{
@@ -54,7 +54,7 @@ public class UserController {
         }
     }
 
-    @GetMapping( "/update")
+    @PostMapping( "/update")
     public User userUpdate(
             @Parameter(in = ParameterIn.QUERY) UserSaveRqstDto userSaveRqstDto
     ) throws Exception{
@@ -71,7 +71,7 @@ public class UserController {
         }
     }
 
-    @GetMapping( "/delete")
+    @PostMapping( "/delete")
     public void userDelete(
             @Parameter(in = ParameterIn.QUERY) UserSaveRqstDto userSaveRqstDto
     ) throws Exception{

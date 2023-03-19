@@ -3,7 +3,8 @@ spring:
     driver-class-name: org.mariadb.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/demo
     username: root
-    password: ezens123
+    password: ykkwon22@@
+#    password: ezens123
     hikari:
       auto-commit: false
       connection-timeout: 3000

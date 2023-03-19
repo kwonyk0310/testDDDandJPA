@@ -1,6 +1,6 @@
 package com.example.demo.test.application.queryservices;
 
-import com.example.demo.test.domain.model.Entity.Reply;
+import com.example.demo.test.domain.model.entity.Reply;
 import com.example.demo.test.domain.query.ReplyListQueryResult;
 import com.example.demo.test.domain.repository.ReplyRepository;
 import com.example.demo.test.interfaces.reply.dto.ReplyListRqstDto;

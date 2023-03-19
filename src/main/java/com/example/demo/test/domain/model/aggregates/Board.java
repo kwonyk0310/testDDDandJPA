@@ -1,6 +1,6 @@
 package com.example.demo.test.domain.model.aggregates;
 
-import com.example.demo.test.domain.model.Entity.Reply;
+import com.example.demo.test.domain.model.entity.Reply;
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
 
@@ -41,8 +41,7 @@ public class Board {
     @Column(name = "upd_date")
     private LocalDateTime updDate;
 
-    @OneToMany
-    @JoinColumn(name = "board_seq")
+    @OneToMany(mappedBy = "board")
     private List<Reply> reply;
 
     @PrePersist
