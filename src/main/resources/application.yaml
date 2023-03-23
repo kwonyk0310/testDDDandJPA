@@ -3,8 +3,8 @@ spring:
     driver-class-name: org.mariadb.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/demo
     username: root
-    password: ykkwon22@@
-#    password: ezens123
+#    password: ykkwon22@@
+    password: ezens123
     hikari:
       auto-commit: false
       connection-timeout: 3000
@@ -22,4 +22,8 @@ spring:
         dialect:
           storage_engine: innodb
         format_sql: true
-        hbm2ddl.auto: update
+        hbm2ddl.auto: create
+  jwt:
+    header: Authorization
+    secret: and0LXRlc3QtYWxqamFiYWVnaS1qd3QtdGVzdC1hbGpqYWJhZWdpLWp3dC10ZXN0LWFsamphYmFlZ2ktand0LXRlc3QtYWxqamFiYWVnaS1qd3QtdGVzdC1hbGpqYWJhZWdpLWp3dC10ZXN0LWFsamphYmFlZ2ktand0LXRlc3QtYWxqamFiYWVnaS1qd3QtdGVzdC1hbGpqYWJhZWdp
+    token-validity-in-seconds: 86400
