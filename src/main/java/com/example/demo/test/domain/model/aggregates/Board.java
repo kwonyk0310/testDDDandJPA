@@ -1,12 +1,10 @@
 package com.example.demo.test.domain.model.aggregates;
 
-import com.example.demo.test.domain.model.entity.Reply;
 import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Builder
 //@ToString
@@ -40,9 +38,6 @@ public class Board {
 
     @Column(name = "upd_date")
     private LocalDateTime updDate;
-
-    @OneToMany(mappedBy = "board")
-    private List<Reply> reply;
 
     @PrePersist
     public void createdAt() {
